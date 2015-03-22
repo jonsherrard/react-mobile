@@ -25,6 +25,8 @@
     "watchify": "^2.5.0"
   },
   "dependencies": {
+    "ampersand-collection": "^1.4.2",
+    "ampersand-model": "^5.0.0",
     "es6-promise": "^2.0.1",
     "hammerjs": "^2.0.4",
     "react": "^0.13.1",
