@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stylus": ""
+    "start": "npm run jade && npm run webpack",
+    "webpack": "webpack --watch --debug src/main.js build/js/bundle.js",
+    "jade": "jade -wP src/index.jade -o ./build"
   },
   "repository": {
     "type": "git",
@@ -18,20 +20,26 @@
   },
   "homepage": "https://github.com/jonsherrard/react-mobile",
   "devDependencies": {
-    "babelify": "^5.0.4",
+    "css-loader": "^0.9.1",
     "jade": "^1.9.2",
+    "jsx-loader": "^0.12.2",
     "nib": "^1.1.0",
-    "stylus": "^0.50.0",
-    "watchify": "^2.5.0"
+    "stylus-loader": "^1.0.0",
+    "webpack": "^1.7.3"
   },
   "dependencies": {
     "ampersand-collection": "^1.4.2",
     "ampersand-model": "^5.0.0",
     "es6-promise": "^2.0.1",
+    "fastclick": "^1.0.6",
     "hammerjs": "^2.0.4",
+    "jsx-loader": "^0.12.2",
     "react": "^0.13.1",
+    "react-iscroll": "0.0.3",
     "react-router": "^0.13.1",
     "store": "^1.3.17",
-    "superagent": "^1.1.0"
+    "style-loader": "^0.8.3",
+    "superagent": "^1.1.0",
+    "webpack": "^1.7.3"
   }
 }
