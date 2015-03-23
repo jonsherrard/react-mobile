@@ -20,11 +20,15 @@
   },
   "homepage": "https://github.com/jonsherrard/react-mobile",
   "devDependencies": {
+    "babel": "^4.7.16",
+    "babel-core": "^4.7.16",
+    "babel-loader": "^4.2.0",
     "css-loader": "^0.9.1",
     "jade": "^1.9.2",
     "jsx-loader": "^0.12.2",
     "nib": "^1.1.0",
     "stylus-loader": "^1.0.0",
+    "style-loader": "^0.8.3",
     "webpack": "^1.7.3"
   },
   "dependencies": {
@@ -33,13 +37,10 @@
     "es6-promise": "^2.0.1",
     "fastclick": "^1.0.6",
     "hammerjs": "^2.0.4",
-    "jsx-loader": "^0.12.2",
     "react": "^0.13.1",
     "react-iscroll": "0.0.3",
     "react-router": "^0.13.1",
     "store": "^1.3.17",
-    "style-loader": "^0.8.3",
-    "superagent": "^1.1.0",
-    "webpack": "^1.7.3"
+    "superagent": "^1.1.0"
   }
 }
