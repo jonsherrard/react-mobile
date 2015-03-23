@@ -1,5 +1,5 @@
 var React = require('react')
 
-require('./test.styl')
+require('./base.styl')
 
 

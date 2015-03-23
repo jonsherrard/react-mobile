@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run jade && npm run webpack",
-    "webpack": "webpack --watch --debug src/main.js build/js/bundle.js",
-    "jade": "jade -wP src/index.jade -o ./build"
+    "webpack": "webpack --watch --debug src/main.js www/js/bundle.js",
+    "jade": "jade -wP src/index.jade -o ./www"
   },
   "repository": {
     "type": "git",
