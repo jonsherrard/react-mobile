@@ -6,7 +6,7 @@ var TransitionGroup = require('react/lib/ReactCSSTransitionGroup')
 var Router = require('react-router');
 var { Route, RouteHandler, Link } = Router;
 
-var iScroll = require('iscroll')
+var iScroll = require('iscroll/build/iscroll-probe')
 
 
 // Components
@@ -17,12 +17,19 @@ const APPNAME = "React Mobile"
 
 class App extends React.Component {
 
+  constructor() {
+    this.state = {
+      yScrollPosition: 0
+    }
+  }
+
   componentDidMount () {
-    this.iScroll = new iScroll(this.refs.scroller.getDOMNode(), {scrollY: true, mousewheel: true})
+    this.iScroll = new iScroll(this.refs.scroller.getDOMNode(), {probeType: 1, scrollY: true, mousewheel: true})
   }
 
   componentDidUpdate () {
     this.iScroll.refresh()
+    this.iScroll.scrollTo(0,0)
   }
 
   render () {
