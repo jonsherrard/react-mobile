@@ -1,0 +1,52 @@
+@import 'nib'
+
+.inner-app-block
+  height calc(100vh - 100px)
+  left 0
+  margin-top 50px
+  margin-bottom 50px
+  overflow-y scroll
+  padding 10px 0px
+  position absolute
+  top 0
+  -webkit-overflow-scrolling touch
+  width 100%
+  &::-webkit-scrollbar
+    width 0 !important
+
+.page
+  padding 10px
+  position absolute
+  top 0
+  left 0
+  min-height 100%
+  min-width 100%
+
+.page-transition
+  backface-visibility hidden
+  clearfix()
+  min-height 100%
+  position relative
+  transform translate3d(0,0,0)
+  visibility visible
+
+.page-left-right-enter
+  transform translateX(-100vw)
+  opacity 0.01
+  z-index 0
+
+.page-left-right-enter.page-left-right-enter-active
+  transition all 0.6s ease-in-out
+  transform translateX(0px)
+  opacity 1
+
+.page-left-right-leave
+  opacity 1
+  transform translateX(0px)
+  transition all 0.6s ease-in-out
+  z-index 10
+
+.page-left-right-leave.page-left-right-leave-active
+  transform translateX(100vw)
+  opacity 0.01
+

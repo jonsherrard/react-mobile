@@ -4,7 +4,7 @@ var Router = require('react-router');
 var { Route, RouteHandler, Link } = Router;
 
 // CSS
-require('page-transitions.styl')
+require('./app.styl')
 
 // Components
 var Navigation = require('components/navigation')
