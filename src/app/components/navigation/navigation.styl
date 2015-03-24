@@ -1,7 +1,8 @@
 @import 'nib'
 
 .navigation-block
-  background rgba(21,21,21,1)
+  background #0074D9
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
   color white
   display table
   height 40px
@@ -11,13 +12,28 @@
   position fixed
   width 100%
   text-align center
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
   z-index 100
 
 .navigation-block__title
   display table-cell
-  height 40px
-  line-height 40px
-  font-size 24px
+  height 44px
+  line-height 44px
+  font-size 18px
   vertical-align middle
+
+.navigation-block__back-button
+  clearfix()
+  position absolute
+  left 10px
+  bottom 5px
+  &:after
+    position absolute
+    content " "
+    padding 20px
+    top -10px
+    left -8px
+
+.navigation-block__svg
+  height 24px
+  width 24px
 

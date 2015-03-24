@@ -11,6 +11,7 @@ var iScroll = require('iscroll')
 
 // Components
 var Navigation = require('components/navigation')
+var Tabs = require('components/tabs')
 
 const APPNAME = "React Mobile"
 
@@ -18,13 +19,16 @@ class App extends React.Component {
 
   componentDidMount () {
     this.iScroll = new iScroll(this.refs.scroller.getDOMNode(), {scrollY: true, mousewheel: true})
-    console.log(this.iScroll)
+  }
+
+  componentDidUpdate () {
+    this.iScroll.refresh()
   }
 
   render () {
     var name = this.context.router.getCurrentPath()
     return (
-      <div>
+      <div className="app-block">
         <Navigation appName={APPNAME} />
         <div className="inner-app-block" ref="scroller">
           <div className="inner-app-block__scroller">
@@ -41,6 +45,7 @@ class App extends React.Component {
             </TransitionGroup>
           </div>
         </div>
+        <Tabs />
       </div>
     )
   }
