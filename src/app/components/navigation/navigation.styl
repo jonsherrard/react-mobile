@@ -23,15 +23,19 @@
 
 .navigation-block__back-button
   clearfix()
+  opacity 0
   position absolute
   left 10px
   bottom 5px
+  transition opacity 0.4s ease-in
   &:after
     position absolute
     content " "
     padding 20px
     top -10px
     left -8px
+  &.visible
+    opacity 1
 
 .navigation-block__svg
   height 24px
