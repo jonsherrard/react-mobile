@@ -27,7 +27,8 @@
   position absolute
   left 10px
   bottom 5px
-  transition opacity 0.4s ease-in
+  transition opacity 0.5s 0.1s ease-in-out, transform 0.6s ease-in-out
+  transform translateY(50px)
   &:after
     position absolute
     content " "
@@ -36,6 +37,7 @@
     left -8px
   &.visible
     opacity 1
+    transform translateY(0px)
 
 .navigation-block__svg
   height 24px
